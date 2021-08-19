@@ -1,13 +1,13 @@
 apiVersion: demo.upbound.io/v1alpha1
 kind: ClusterClaim
 metadata:
-  name: b-team
-  namespace: b-team
+  name: team-a-cluster3
 spec:
-  id: b-team
+  id: team-a-cluster3
   compositionSelector:
     matchLabels:
       provider: aws
       cluster: eks
   parameters:
-    nodeSize: large
+    nodeSize: medium
+    minNodeCount: 5
