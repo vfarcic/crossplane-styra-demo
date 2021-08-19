@@ -12,7 +12,7 @@ maintenanceWindows := [
 
 teamNodeAllocations := {
   "team-a": 5,
-  "team-b": 20
+  "team-b": 205
 }
 
 enforce[decision] {
