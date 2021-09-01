@@ -3,17 +3,17 @@ package policy["com.styra.kubernetes.validating"].rules.rules
 import data.maintenanceWindows
 import data.teamNodeAllocations
 
-maintenanceWindows := [
-  {
-    "start": "2021-08-18T14:00:00+02:00",
-    "end": "2021-08-18T23:00:00+02:00"
-  }
-]
-
-teamNodeAllocations := {
-  "team-a": 5,
-  "team-b": 205
-}
+#maintenanceWindows := [
+#  {
+#    "start": "2021-08-18T14:00:00+02:00",
+#    "end": "2021-08-18T23:00:00+02:00"
+#  }
+#]
+#
+#teamNodeAllocations := {
+#  "team-a": 5,
+#  "team-b": 205
+#}
 
 enforce[decision] {
   #title: Outside of maintenance window
