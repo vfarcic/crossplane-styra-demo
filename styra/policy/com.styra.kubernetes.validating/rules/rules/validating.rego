@@ -1,7 +1,7 @@
 package policy["com.styra.kubernetes.validating"].rules.rules
 
-#import data.maintenanceWindows
-#import data.teamNodeAllocations
+import data.maintenanceWindows
+import data.teamNodeAllocations
 
 maintenanceWindows := [
   {
