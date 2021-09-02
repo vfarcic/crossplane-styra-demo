@@ -18,7 +18,7 @@ git clone \
 cd crossplane-styra-demo
 
 # TODO: Viktor: Switch to a "real" management cluster
-k3d cluster create --config k3d.yaml
+kind create cluster --config kind.yaml
 
 # Creating 2 Namespaces so that we can show different policies for different teams
 
@@ -76,7 +76,11 @@ kubectl apply --filename crossplane
 # Setup Styra #
 ###############
 
-# TODO: Adam: Commands to install Styra and policies we'll showcase
+kubectl label namespace kube-system \
+    openpolicyagent.org/webhook=ignore
+
+curl -H 'Authorization: Bearer C-hDf4Q3dorCcneI64T25uK2UjxQaDwKq6r05pXfJ2FTavkTNERCzr7y4a28pmRXj9JotzVpFhyS6XYg3A9R6iodk6w2Yi4' 'https://adamsandor.svc.styra.com/v1/systems/ce69e076ca17433f8cc1a4781c7d6826/assets/kubectl-all' \
+    | kubectl apply --filename -
 
 ##############
 # Scenario 1 #
@@ -84,16 +88,27 @@ kubectl apply --filename crossplane
 
 # TODO: The commands that follow will work without any violations. We should add some failures due to policy violations, fix it, run it again, succeed (or whichever other scenario makes sense).
 
-cat infra/cluster-a-team.yaml
+cat infra/team-a-cluster-1.yaml
 
 kubectl --namespace a-team \
-    apply --filename infra/cluster-a-team.yaml
+    apply --filename infra/team-a-cluster-1.yaml
+
+# NOTE: It fails. Change it in Git.
 
 kubectl --namespace a-team \
     get clusterclaims,managed,providerconfigs,releases
 
 kubectl --namespace a-team \
     get clusterclaims
+
+kubectl --namespace a-team \
+    apply --filename infra/team-a-cluster-2.yaml
+
+# NOTE: It fails.
+
+
+
+
 
 # Repeat the previous command until the `CONTROLPLANE` column is set to `ACTIVE`
 
