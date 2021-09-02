@@ -147,13 +147,10 @@ unset KUBECONFIG
 ###########
 
 kubectl --namespace a-team \
-    delete --filename infra/cluster-a-team.yaml
-
-kubectl --namespace b-team \
-    delete --filename infra/cluster-b-team.yaml
+    delete --filename infra
 
 kubectl get managed
 
 # Repeat until all the resources are removed
 
-k3d cluster delete crossplane
+kind delete cluster
