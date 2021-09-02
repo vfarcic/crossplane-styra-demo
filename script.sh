@@ -8,6 +8,19 @@
 # - Styra: TODO:
 # - Crossplane: TODO:
 
+##############
+# Demo Steps #
+##############
+
+1. V installs Crossplane
+1. V creates cluster, deletes cluster
+1. A installs OPA
+1. V creates cluster, tries to delete cluster. Fails because of maintenance window
+1. A explains how the maintenance window workd, A adds maintenance window
+1. V deletes cluster
+1. V tries to create too many clusters
+1. A explains rule preventing that
+
 #########
 # Setup #
 #########
