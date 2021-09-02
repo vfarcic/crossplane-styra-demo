@@ -106,10 +106,6 @@ kubectl --namespace a-team \
 
 # NOTE: It fails.
 
-
-
-
-
 # Repeat the previous command until the `CONTROLPLANE` column is set to `ACTIVE`
 
 export KUBECONFIG=$PWD/kubeconfig.yaml
@@ -129,17 +125,6 @@ cat crossplane/definition.yaml
 cat crossplane/composition-eks.yaml
 
 unset KUBECONFIG
-
-##############
-# Scenario 2 #
-##############
-
-# TODO: The commands that follow will work without any violations. We should add some failures due to policy violations, fix it, run it again, succeed (or whichever other scenario makes sense).
-
-cat infra/cluster-b-team.yaml
-
-kubectl --namespace b-team \
-    apply --filename infra/cluster-b-team.yaml
 
 ###########
 # Destroy #
