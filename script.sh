@@ -104,6 +104,9 @@ kubectl --namespace a-team \
 kubectl --namespace a-team \
     apply --filename infra/team-a-cluster-2.yaml
 
+kubectl --namespace a-team \
+    apply --filename infra/team-a-cluster-3.yaml
+
 # NOTE: It fails.
 
 # Repeat the previous command until the `CONTROLPLANE` column is set to `ACTIVE`
