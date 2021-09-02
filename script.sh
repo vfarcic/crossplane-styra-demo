@@ -13,13 +13,13 @@
 ##############
 
 1. V installs Crossplane
-1. V creates cluster, deletes cluster
-1. A installs OPA
-1. V creates cluster, tries to delete cluster. Fails because of maintenance window
-1. A explains how the maintenance window workd, A adds maintenance window
-1. V deletes cluster
-1. V tries to create too many clusters
-1. A explains rule preventing that
+2. V creates cluster, deletes cluster
+3. A installs OPA
+4. V creates cluster, tries to delete cluster. Fails because of maintenance window
+5. A explains how the maintenance window workd, A adds maintenance window
+6. V deletes cluster
+7. V tries to create too many clusters
+8. A explains rule preventing that
 
 #########
 # Setup #
