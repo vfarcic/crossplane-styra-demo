@@ -25,13 +25,12 @@
 # Setup #
 #########
 
+# Create a Kubernetes cluster (e.g., Civo)
+
 git clone \
     https://github.com/vfarcic/crossplane-styra-demo
 
 cd crossplane-styra-demo
-
-# TODO: Viktor: Switch to a "real" management cluster
-kind create cluster --config kind.yaml
 
 # Creating 2 Namespaces so that we can show different policies for different teams
 
