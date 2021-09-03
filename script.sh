@@ -89,11 +89,8 @@ kubectl apply --filename crossplane
 # Setup Styra #
 ###############
 
-kubectl label namespace kube-system \
-    openpolicyagent.org/webhook=ignore
-
-curl -H 'Authorization: Bearer C-hDf4Q3dorCcneI64T25uK2UjxQaDwKq6r05pXfJ2FTavkTNERCzr7y4a28pmRXj9JotzVpFhyS6XYg3A9R6iodk6w2Yi4' 'https://adamsandor.svc.styra.com/v1/systems/ce69e076ca17433f8cc1a4781c7d6826/assets/kubectl-all' \
-    | kubectl apply --filename -
+Use installation instructions from:
+https://adamsandor.svc.styra.com/systems/ce69e076ca17433f8cc1a4781c7d6826/settings/install/kubectl
 
 ##############
 # Scenario 1 #
