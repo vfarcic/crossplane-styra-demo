@@ -2,8 +2,6 @@ apiVersion: demo.upbound.io/v1alpha1
 kind: ClusterClaim
 metadata:
   name: team-a-cluster3
-  labels:
-    owner-team: team-a
 spec:
   id: team-a-cluster3
   compositionSelector:
