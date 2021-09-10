@@ -42,11 +42,12 @@ enforce[decision] {
     nodes := clusterclaims[i].spec.parameters.minNodeCount
   ]
 
-  sum(allNodes) > teamNodeAllocations[team]
+  newNodeCount := sum(allNodes) + input.request.object.spec.parameters.minNodeCount
+  newNodeCount > teamNodeAllocations[team]
 
   decision := {
     "allowed": false,
-    "message": sprintf("Number of total nodes (%v) would be over maximum allocated nodes (%v)", [sum(allNodes), teamNodeAllocations[team]])
+    "message": sprintf("Number of total nodes (%v) would be over maximum allocated nodes (%v)", [newNodeCount, teamNodeAllocations[team]])
   }
 }
 enforce[decision] {
