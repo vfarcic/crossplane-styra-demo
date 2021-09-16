@@ -5,7 +5,7 @@ import data.global.crossplane.teamNodeAllocations
 
 enforce[decision] {
   #title: Outside of maintenance window
-  input.request.kind.kind == "ClusterClaim"
+  #input.request.kind.kind == "ClusterClaim"
   outside_maint_window
 
   decision := {
