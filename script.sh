@@ -12,14 +12,25 @@
 # Demo Steps #
 ##############
 
-1. V installs Crossplane
-2. V creates cluster, deletes cluster
-3. A installs OPA
-4. V creates cluster, tries to delete cluster. Fails because of maintenance window
-5. A explains how the maintenance window workd, A adds maintenance window
-6. V deletes cluster
-7. V tries to create too many clusters
-8. A explains rule preventing that
+1. Intro:
+* Problem statement with short discussion
+
+2. Demo:
+* V installs Crossplane
+* V creates 3 clusters
+* A installs OPA
+* V creates cluster, tries to delete cluster. Fails because of maintenance window
+* A explains how the maintenance window workd, A adds maintenance window
+* V deletes cluster
+* V tries to create too many clusters
+* A explains rule preventing that
+
+Live drawing:
+* Crossplane part
+* Styra part
+
+Discussion
+* 
 
 #########
 # Setup #
