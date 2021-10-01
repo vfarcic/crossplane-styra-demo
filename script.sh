@@ -16,13 +16,11 @@
 * Problem statement with short discussion
 
 2. Demo:
-* V installs Crossplane
-* V creates 3 clusters
+* V creates cluster
 * A installs OPA
-* V creates cluster, tries to delete cluster. Fails because of maintenance window
-* A explains how the maintenance window workd, A adds maintenance window
-* V deletes cluster
-* V tries to create too many clusters
+* V tries to create cluster but fails because of maintenance window
+* A adds maintenance window
+* V tried to create 3rd cluster but fails because of node count
 * A explains rule preventing that
 
 Live drawing:
